@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in</title>
+    <style>
+        button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 11%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+    </style>
+    </head>
+    <body style="background-color:lightblue;">
+
+        <h2>Log In Form</h2>
+        
+
+        <div>
+            <form>
+                First Name:<br>
+                <input id="field1" type="text" name="firstName" onblur="checkField1();" required/>
+                <span id="massage1"></span><br>
+                Middle Name:<br>
+                <input id="field2" type="text" name="firstName" onblur="checkField2();" required/>
+                <span id="massage2"></span><br>
+                Last Name:<br>
+                <input id="field3" type="text" name="lastName" onblur="checkField3();" required>
+                <span id="massage3"></span><br>
+                Email Address:<br>
+                <input type="email" name="email" required><br>
+                Password:<br>
+                <input type="password" name="password"><br>
+                Confirm Password:<br>
+                <input type="password" name="password"><br>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <script>
+
+
+                function checkField1()
+                {
+                    var field=document.getElementById("field1").value;
+                    var regex = /^[A-Za-z]{2,8}$/;
+
+                    if(regex.test(field))
+                    document.getElementById("massage1").innerHTML="Input accepted";
+
+                    else
+                    document.getElementById("massage1").innerHTML=
+                    "Please use two to eight letter code formate";
+                }
+
+                function checkField2()
+                {
+                    var field=document.getElementById("field2").value;
+                    var regex = /^[A-Za-z]{2,8}$/;
+
+                    if(regex.test(field))
+                    document.getElementById("massage2").innerHTML="Input accepted";
+
+                    else
+                    document.getElementById("massage2").innerHTML=
+                    "Please use two to eight letter code formate";
+                }
+
+                function checkField3()
+                {
+                    var field=document.getElementById("field3").value;
+                    var regex = /^[A-Za-z]{2,8}$/;
+
+                    if(regex.test(field))
+                    document.getElementById("massage3").innerHTML="Input accepted";
+
+                    else
+                    document.getElementById("massage3").innerHTML=
+                    "Please use two to eight letter code formate";
+                }
+            </script>
+        </div>
+
+
+
+    </body>
+    
+</html>
